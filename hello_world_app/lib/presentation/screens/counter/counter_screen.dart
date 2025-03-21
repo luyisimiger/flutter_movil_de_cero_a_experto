@@ -23,23 +23,33 @@ class _CounterScreenState extends State<CounterScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("$clickCount", style: TextStyle( fontSize: 160, fontWeight: FontWeight.w100)),
-            Text("Clicks", style: TextStyle( fontSize: 25))
+            
+            // opcion 1 --- + recomendada
+            Text("Click${ clickCount == 1 ? '':'s' }", style: TextStyle( fontSize: 25))
+
+            // opcion 2
+            /*
+            if (clickCount == 1)
+              Text("Click", style: TextStyle( fontSize: 25)),
+            
+            if (clickCount != 1 )
+              Text("Clicks", style: TextStyle( fontSize: 25))
+            */
+
           ],
         )
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
                     
-          // opcion 1
-          /*
+          // opcion 1 --- + recomendada
           setState(() {
             clickCount++;  
-          });
-          */
+          });          
 
           // opcion 2
-          clickCount++;
-          setState(() {});
+          // clickCount++;
+          // setState(() {});
         },
         child: Icon( Icons.plus_one ),
       ),
