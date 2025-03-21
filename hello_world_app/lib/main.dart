@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world_app/presentation/screens/counter/counter_functions_screen.dart';
+// import 'package:hello_world_app/presentation/screens/counter/counter_screen.dart';
 
 void main() {
   runApp( MyApp() );
@@ -11,14 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Transform.scale(
-            scale: 4,
-            child: Text("Hola mundo")
-          )
-        ) 
-      )
+      
+      theme: ThemeData(
+        useMaterial3: true, // NO es necesario, ya lo habilita por defecto
+        colorSchemeSeed: Colors.purple
+      ),
+
+      home: const CounterFunctionsScreen()
     );
   }
 }
