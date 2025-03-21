@@ -7,11 +7,20 @@ class CounterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Transform.scale(
-          scale: 3,
-          child: Text("Counter Screen")
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("10", style: TextStyle( fontSize: 160, fontWeight: FontWeight.w100)),
+            Text("Clicks", style: TextStyle( fontSize: 25))
+          ],
         )
-      ) 
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+
+        },
+        child: Icon( Icons.plus_one ),
+      ),
     );
   }
 }
