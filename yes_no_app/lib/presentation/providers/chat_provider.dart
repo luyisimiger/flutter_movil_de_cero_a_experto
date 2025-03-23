@@ -7,13 +7,7 @@ class ChatProvider extends ChangeNotifier {
   final chatScroll = ScrollController();
   final getterAnswer = GetYesnoAnswer();
 
-  List<Message> messages = [
-    Message(text: "mensaje 1", type: MessageType.mine),
-    Message(text: "mensaje 2", type: MessageType.others),
-    Message(text: "mensaje 3", type: MessageType.others),
-    Message(text: "mensaje 4", type: MessageType.mine),
-    Message(text: "mensaje 5", type: MessageType.others)
-  ];
+  List<Message> messages = [];
 
   void sendMessage( String text) async {
     
