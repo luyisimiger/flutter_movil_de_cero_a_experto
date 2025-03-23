@@ -32,7 +32,11 @@ class ChatProvider extends ChangeNotifier {
   }
 
   void herReply() async {
-    final herResp = await getterAnswer.getAnswer();
+    final herMessage = await getterAnswer.getAnswer();
+    messages.add(herMessage);
+    
+    notifyListeners();
+    moveScrollToBottom();
   }
 
   void moveScrollToBottom() async {
