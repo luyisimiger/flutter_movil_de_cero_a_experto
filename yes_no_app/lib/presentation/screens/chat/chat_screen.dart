@@ -48,7 +48,7 @@ class _ChatView extends StatelessWidget {
                   final message = chatProvider.messages[index];
                   return ( message.type == MessageType.others )
                   ? const HerMessageBubble()
-                  : const MyMessageBubble();
+                  : MyMessageBubble( message: message);
                 },
               )
             ),
