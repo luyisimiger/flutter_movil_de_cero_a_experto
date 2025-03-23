@@ -12,7 +12,7 @@ class DiscoverProvider extends ChangeNotifier {
 
   Future<void> loadNextPage() async {
     
-    await Future.delayed(Duration(milliseconds: 1500));
+    // await Future.delayed(Duration(milliseconds: 1500));
 
     final videos = videoPosts.map(
       (video) => LocalVideoModel.fromJsonMap(video).toVideoPostEntity()
