@@ -12,6 +12,9 @@ class ChatProvider extends ChangeNotifier {
   ];
 
   void sendMessage( String text) async {
-    // TODO: implementar
+    final newMessage = Message(text: text, type: MessageType.mine);
+    messages.add(newMessage);
+
+    notifyListeners();
   }
 }
